@@ -1,0 +1,73 @@
+.topbar {
+  background: var(--black);
+  color: var(--gray-400);
+  font-size: 12px;
+  padding: 6px 0;
+}
+.topbar-inner { display: flex; justify-content: space-between; align-items: center; }
+.topbar-links { display: flex; gap: 12px; align-items: center; }
+.topbar-links a:hover { color: var(--red); }
+
+.navbar { background: var(--red); padding: 12px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+.navbar-inner { display: flex; align-items: center; gap: 20px; }
+
+.logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.logo-icon { font-size: 28px; }
+.logo-main { display: block; font-family: var(--font-cond); font-size: 24px; font-weight: 900;
+  color: var(--white); letter-spacing: 1px; line-height: 1; text-transform: uppercase; }
+.logo-sub { display: block; font-size: 9px; color: rgba(255,255,255,0.7); letter-spacing: 2px; text-transform: uppercase; }
+
+.search-bar { flex: 1; display: flex; max-width: 600px; border-radius: var(--radius); overflow: hidden;
+  border: 3px solid rgba(255,255,255,0.3); transition: var(--transition); }
+.search-bar:focus-within { border-color: var(--white); }
+.search-bar input { flex: 1; padding: 10px 16px; border: none; font-size: 14px; background: var(--white);
+  color: var(--black); outline: none; }
+.search-bar button { padding: 10px 16px; background: var(--black); color: var(--white);
+  border: none; font-size: 16px; cursor: pointer; transition: var(--transition); }
+.search-bar button:hover { background: var(--red-dark); }
+
+.nav-actions { display: flex; align-items: center; gap: 12px; }
+
+.user-menu { position: relative; }
+.user-btn { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.15);
+  color: var(--white); padding: 8px 14px; border-radius: var(--radius); font-weight: 600;
+  font-size: 14px; transition: var(--transition); }
+.user-btn:hover { background: rgba(255,255,255,0.25); }
+.user-avatar { width: 28px; height: 28px; background: var(--black); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; }
+.user-dropdown { position: absolute; top: calc(100% + 8px); right: 0; background: var(--white);
+  border-radius: var(--radius); box-shadow: var(--shadow-lg); min-width: 160px;
+  overflow: hidden; display: none; z-index: 100; border: 1px solid var(--gray-200); }
+.user-menu:hover .user-dropdown { display: block; }
+.user-dropdown a, .user-dropdown button { display: block; width: 100%; padding: 12px 16px;
+  font-size: 14px; font-weight: 600; color: var(--black); background: none; text-align: left;
+  transition: var(--transition); }
+.user-dropdown a:hover, .user-dropdown button:hover { background: var(--gray-100); color: var(--red); }
+
+.cart-btn { display: flex; align-items: center; gap: 10px; background: var(--black);
+  color: var(--white); padding: 8px 16px; border-radius: var(--radius); position: relative;
+  transition: var(--transition); }
+.cart-btn:hover { background: var(--gray-800); transform: translateY(-1px); }
+.cart-icon { font-size: 20px; }
+.cart-badge { position: absolute; top: -6px; right: -6px; background: var(--yellow); color: var(--black);
+  border-radius: 50%; width: 20px; height: 20px; font-size: 11px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center; }
+.cart-label { display: flex; flex-direction: column; line-height: 1.2; }
+.cart-label small { font-size: 10px; opacity: 0.7; text-transform: uppercase; }
+.cart-label strong { font-size: 14px; font-weight: 800; }
+
+.hamburger { background: none; color: white; font-size: 24px; display: none; }
+.show-mobile { display: none; }
+
+.cat-nav { background: var(--dark); }
+.cat-nav-inner { display: flex; gap: 0; overflow-x: auto; }
+.cat-link { padding: 12px 18px; color: var(--gray-200); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.5px; transition: var(--transition); white-space: nowrap; border-bottom: 3px solid transparent; }
+.cat-link:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+.cat-link.active { color: var(--red); border-bottom-color: var(--red); }
+
+@media (max-width: 768px) {
+  .search-bar { display: none; }
+  .hamburger { display: block; }
+  .show-mobile { display: flex; }
+}

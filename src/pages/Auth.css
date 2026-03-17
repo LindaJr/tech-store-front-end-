@@ -1,0 +1,36 @@
+.auth-page { min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px; }
+
+.auth-card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow-lg);
+  width: 100%; max-width: 440px; overflow: hidden; border-top: 4px solid var(--red); }
+
+.auth-logo { background: var(--black); padding: 24px; display: flex; align-items: center;
+  justify-content: center; gap: 10px; font-family: var(--font-cond); font-size: 28px;
+  font-weight: 900; color: var(--white); text-transform: uppercase; letter-spacing: 1px; }
+.auth-logo span:first-child { font-size: 32px; }
+
+.auth-tabs { display: flex; border-bottom: 2px solid var(--gray-200); }
+.auth-tabs button { flex: 1; padding: 16px; font-size: 14px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.5px; background: none; color: var(--gray-400); transition: var(--transition);
+  border-bottom: 3px solid transparent; margin-bottom: -2px; }
+.auth-tabs button:hover { color: var(--black); }
+.auth-tabs button.active { color: var(--red); border-bottom-color: var(--red); }
+
+.auth-form { padding: 28px 28px 0; }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.form-group label { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: var(--black); }
+.form-group input { padding: 12px 14px; border: 2px solid var(--gray-200); border-radius: var(--radius);
+  font-size: 14px; transition: var(--transition); }
+.form-group input:focus { outline: none; border-color: var(--red); }
+
+.auth-error { background: #fde8e8; color: var(--red); padding: 10px 14px; border-radius: var(--radius);
+  font-size: 13px; font-weight: 700; margin-bottom: 16px; border-left: 4px solid var(--red); }
+
+.auth-submit { width: 100%; margin-bottom: 20px; }
+
+.auth-hint { background: var(--gray-100); margin: 0 28px; padding: 10px 14px; border-radius: var(--radius);
+  font-size: 12px; color: var(--gray-700); text-align: center; margin-bottom: 12px; }
+
+.auth-footer { text-align: center; font-size: 13px; color: var(--gray-400); padding: 16px 28px 28px; }
+.auth-switch { background: none; color: var(--red); font-weight: 700; font-size: 13px;
+  padding: 0; text-decoration: underline; transition: var(--transition); }
+.auth-switch:hover { color: var(--red-dark); }
