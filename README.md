@@ -78,7 +78,7 @@ Register any new account for customer access.
 - **Styling**: Custom CSS with CSS Variables (Barlow font)
 - **Data**: In-memory store (swap with MongoDB/PostgreSQL for production)
 
-## 🔮 Production Upgrades
+## 🔮 Possible Production Upgrades
 - Replace in-memory store with MongoDB/PostgreSQL
 - Add Stripe/PayFast payment integration
 - Add email notifications (nodemailer)
